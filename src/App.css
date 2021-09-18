@@ -1,19 +1,62 @@
-.header{
-  
-  height: 50vh;
-  width: 100%;
-  background: url('C:\Users\Piero\Desktop\React\book-search\src\images\library.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+html{
+    font-size: 12px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+small{
+    font-size: 1.2rem;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 40px;
 }
 
 .title{
-  padding:0;
-  color: #fff;
-  font-size: 72px;
-  text-align:center;
+    font-size:4.4rem;
+    text-align:center;
 }
 
-.text-search{
-  margin: 0 45% ;
+.form{
+    display:grid;
 }
+
+.input{
+    font-size: 1.6rem;
+    padding: 0.5rem 2rem;
+    line-height: 2.8rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.button{
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(0,0,0,0.75);
+    border-radius: 20px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 250ms;
+}
+
+.button:hover{
+    background-color: rgba(0,0,0,0.85)
+}
+
+

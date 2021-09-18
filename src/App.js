@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Book from './components/Book';
-import HomeSearch from './components/HomeSearch';
+import Book from './pages/Book';
+import HomeSearch from './pages/HomeSearch';
 import './App.css';
 
 function App() {
