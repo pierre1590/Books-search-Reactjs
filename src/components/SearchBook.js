@@ -11,16 +11,18 @@ function SearchBook () {
     //create the states for books
     const [book, setBooks] = useState([]);
 
-    const handleSubmit = (e) =>{
-    
+
+    function handleChange(e) {
+        const query = e.target.value;
+        setQuery(query);
+    }
+
+    function handleSubmit (e) {
     e.preventDefault();
 
-    
-
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
-
-    axios.get(url)
+    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
     .then(res=>{
+        console.log(res);
         setBooks(res.data.items);
     })
     .catch(err => {
@@ -39,7 +41,7 @@ function SearchBook () {
                     className="input"
                     name="query"
                     value={query} 
-                    onChange={e => setQuery(e.target.value)}
+                    onChange={handleChange}
                     />
                     <Button className="button"  type="submit">
                        Search

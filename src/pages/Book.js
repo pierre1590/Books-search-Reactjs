@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Card, Button, Modal} from 'react-bootstrap';
+import {Card, Button, Modal, CloseButton} from 'react-bootstrap';
  
 const Book = (props) => {
     const [modal, setModal] = useState(false);
@@ -17,7 +17,7 @@ const Book = (props) => {
                         <h3>
                             Title
                         </h3>
-
+                        <CloseButton aria-label="Close" className="close" onClick={toggle} />
                     </Modal>
                 </Card>
                 
