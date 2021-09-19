@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
-import axios from 'axios';
+import React from 'react';
 import Book from './Book';
 import SearchBook from '../components/SearchBook.js';
 
 function HomeSearch(){
+   
 return (
     <div className="container">
+        <div className="header">
             <h1 className="title">Book Finder</h1>
             <SearchBook />
+        </div>
+        <Book
+        />
     </div>
 )
 

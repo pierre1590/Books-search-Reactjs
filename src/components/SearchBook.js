@@ -1,19 +1,27 @@
-import React from "react";
-import { Button, InputGroup, FormControl} from 'react-bootstrap';
+import React, {useState} from "react";
+import { Button, InputGroup, FormControl, Card} from 'react-bootstrap';
 import axios from "axios";
 
-function SearchBook () {
 
-const handleSubmit = (e) =>{
+
+function SearchBook () {
+    //states input query
+    const [query, setQuery] = useState('');
+
+    //create the states for books
+    const [book, setBooks] = useState([]);
+
+    const handleSubmit = (e) =>{
+    
     e.preventDefault();
 
-    const query = 'React';
+    
 
     const url = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
 
     axios.get(url)
     .then(res=>{
-        console.log(res);
+        setBooks(res.data.items);
     })
     .catch(err => {
         console.log(err.response);
@@ -23,18 +31,21 @@ const handleSubmit = (e) =>{
 
         return (
             <div>
-                <InputGroup className="mb-3 form" onSubmi={handleSubmit}>
+                <InputGroup className="mb-3 form" onSubmit={handleSubmit}>
                     <FormControl
                     placeholder="Search book..."
                     aria-label="search-book"
                     aria-describedby="basic-addon2"
                     className="input"
                     name="query"
+                    value={query} 
+                    onChange={e => setQuery(e.target.value)}
                     />
                     <Button className="button"  type="submit">
                        Search
                     </Button>
                 </InputGroup>
+                
             </div>
         )
 }
