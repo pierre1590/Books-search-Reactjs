@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { Button, InputGroup, FormControl, Form, Card, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import Image from '../images/ImageNotAvailable.jpg';
+import Book from './Book';
 
 function HomeSearch(){
      //states input query
@@ -16,7 +17,7 @@ function HomeSearch(){
   }
 const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     axios
       .get(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=40`)
       .then((res) => {
@@ -26,6 +27,8 @@ const handleSubmit = (e) => {
       .catch((err) => {
         console.log(err.response);
       });
+        
+     
 }
 
 
@@ -53,8 +56,8 @@ return(
                     </Form>
         </div>
                 <Row><br/>
-                <h3 style={{textAlign:'center',marginTop:'5px'}}>Total books: {book.length}</h3>
-                <h3 style={{textAlign:'center'}}>Searched for : <p style={{fontSize:'20px',color:'red'}}>"{query}"</p></h3>
+                <h3 style={{textAlign:'center',marginTop:'5px'}}>Books found: {book.length}</h3>
+                <h3 style={{textAlign:'center'}}>Searched for : <p style={{fontSize:'22px',color:'red'}}>" {query} "</p></h3>
                   {book.map((query) => ( 
                       <Col sm={4}>
                           <Card key={query.id} style={{width:'210px', margin: '30px 20% 15px', border: '0' }}>  
@@ -63,7 +66,7 @@ return(
                                   <h5 className="card-title" style={{textAlign:'center'}}>{query.volumeInfo.title}</h5>   
                               </Card.Body> 
                               <Button size='lg' variant="primary" style={{borderRadius:'8px', textAlign: 'center'}}>
-                                    More info
+                                    More info...
                             </Button>
                           </Card> 
                         </Col>
@@ -72,9 +75,7 @@ return(
                 
                
     </div>
-        
-        
-    
+     
     
 )
 
