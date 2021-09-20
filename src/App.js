@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Book from './pages/Book';
 import HomeSearch from './pages/HomeSearch';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

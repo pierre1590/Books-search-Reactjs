@@ -7,7 +7,7 @@ const Book = (props) => {
 
     return (
         <div>
-                {/* <Card style={{ width: '15rem', margin:  '10px', padding: '2px' }} className="m-auto">
+                 <Card style={{ width: '15rem', margin:  '10px', padding: '2px' }} className="m-auto">
                     <Card.Img variant="top" style={{width: '100%', height: '230px'}}  />
                     <Card.Body style={{textAlign: 'center'}}>
                         <Card.Title className="card-title" style={{fontSize:'20px',margin: '5px'}}></Card.Title>
@@ -20,7 +20,7 @@ const Book = (props) => {
                         <CloseButton aria-label="Close" className="close" onClick={toggle} />
                     </Modal>
                 </Card>
-                 */}
+                 
         </div>
     )
 }

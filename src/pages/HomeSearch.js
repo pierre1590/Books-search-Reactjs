@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { Button, InputGroup, FormControl, Form, Card, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
+import Image from '../images/ImageNotAvailable.jpg';
 
 function HomeSearch(){
      //states input query
@@ -27,6 +28,8 @@ const handleSubmit = (e) => {
       });
 }
 
+
+
 return(
    <div className="container">
         <div className="header">
@@ -34,36 +37,39 @@ return(
                     <Form onSubmit={handleSubmit}>
                       <InputGroup className='mb-3 form'>
                         <FormControl
+                           size="lg"
                             placeholder='Search book...'
                             aria-label='search-book'
                             aria-describedby='basic-addon2'
-                            className='input'
+                            
                             name='query'
                             value={query}
                             onChange={handleChange}
                         />
-                            <Button className='button' type='submit'>
-                                Search
+                            <Button  variant="secondary" type='submit' id="button-addon2">
+                               <i class="fas fa-search"></i>
                             </Button>
                      </InputGroup>
                     </Form>
         </div>
-         
-                  {book.map((query,index) => (  
-                      
-                        <Col>  
-                          <Card key={index} style={{ 'marginTop': '10px' }}>  
-                              <Card.Img variant="top" src={query.volumeInfo.imageLinks !== undefined ? query.volumeInfo.imageLinks.thumbnail : ''}  />  
+                <Row><br/>
+                <h3 style={{textAlign:'center',marginTop:'5px'}}>Total books: {book.length}</h3>
+                <h3 style={{textAlign:'center'}}>Searched for : <p style={{fontSize:'20px',color:'red'}}>"{query}"</p></h3>
+                  {book.map((query) => ( 
+                      <Col sm={4}>
+                          <Card key={query.id} style={{width:'210px', margin: '30px 20% 15px', border: '0' }}>  
+                               <Card.Img variant="top" src={query.volumeInfo.imageLinks !== undefined ? query.volumeInfo.imageLinks.thumbnail: Image}  />   
                               <Card.Body>  
-                                  <h5 className="card-title">{query.volumeInfo.title}</h5>   
+                                  <h5 className="card-title" style={{textAlign:'center'}}>{query.volumeInfo.title}</h5>   
                               </Card.Body> 
-                              <Button variant="primary">
+                              <Button size='lg' variant="primary" style={{borderRadius:'8px', textAlign: 'center'}}>
                                     More info
-                              </Button> {''}
+                            </Button>
                           </Card> 
-                        </Col> 
-                      
-                  ))}  
+                        </Col>
+                  ))}
+                </Row> 
+                
                
     </div>
         
