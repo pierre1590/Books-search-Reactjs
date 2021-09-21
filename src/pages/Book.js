@@ -36,19 +36,22 @@ const Book = ({
                           <Modal.Title style={{fontSize: '25px'}}><h3>{title}</h3></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                        {thumbnail}
-                          <div style={{fontSize:'18px', color:'darkBlack'}}>
-                           Pages: {pages}<br/>
-                           Language: {language}<br/>
-                           Author: {author} <br/>
-                           Publisher: {publisher}<br/>
-                           Published Date: {publishedDate}<br/>
-                           Print Type: {printType} <br/>
-                           Average Rating: <Rating rating={averageRating}  />    
-                           <br/><br/>   
-                           Description:<br/>
-                           <p>{description}</p>
-                         </div>
+                          <div style={{textAlign:'center'}}> 
+                                 <img src={thumbnail} alt="Generic_image"/>
+                          </div> 
+                          <div style={{fontSize:'18px', textAlign: 'center'}}>
+                              Pages: {pages}<br/>
+                              Language: {language}<br/>
+                              Author: {author} <br/>
+                              Publisher: {publisher}<br/>
+                              Published Date: {publishedDate}<br/>
+                              Print Type: {printType} <br/>
+                              Average Rating: <Rating rating={averageRating}  />    
+                           </div> 
+                           <div style={{fontSize:'18px'}}>
+                                  Description:<br/>
+                                  <p>{description}</p>
+                          </div>
                         </Modal.Body>
                     </Modal>
             </Card> 

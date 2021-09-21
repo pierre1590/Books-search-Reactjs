@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import {IoIosStar, IoIosStarOutline} from 'react-icons/io';
 
 function Rating(props) {
-    const [rating, setRating] = useState(0);
+    const [rating, setRating] = useState(props.rating);
     return (
         <div style={{color: 'orange'}}>
         {rating >= 1 ? ( 
