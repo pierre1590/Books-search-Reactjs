@@ -1,33 +1,57 @@
 import React, {useState} from 'react';
-import {Card, Button, Modal, CloseButton} from 'react-bootstrap';
- 
-const Book = (thumbnail,
-  title,
-  pageCount,
-  language,
-  description,
-  authors,
-  publisher,) => {
-    const [modal, setModal] = useState(false);
-    const toggle = () => setModal(!modal);
-
+import {Card, Button, Modal} from 'react-bootstrap';
+import Rating from '../components/Rating'; 
+const Book = ({
+    thumbnail, 
+    title, 
+    pages, 
+    language, 
+    description, 
+    author, 
+    publisher,
+    publishedDate,
+    printType,
+    averageRating }, props) => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <div>
-             <Modal isOpen={modal} toggle={toggle}>
-                 <Card style={{ width: '15rem', margin:  '10px', padding: '2px' }} className="m-auto">
-                    <Card.Img variant="top" style={{width: '100%', height: '230px'}}  />
-                    <Card.Body style={{textAlign: 'center'}}>
-                        <Card.Title className="card-title" style={{fontSize:'20px',margin: '5px'}}>{title}</Card.Title>
-                        <Button style={{borderRadius:'10px',width:'100px',height: '30px',pointer: 'cursor'}} variant="primary" onClick={toggle}>More info</Button>
-                    </Card.Body>
-                   
-                        <h3>
-                            T
-                        </h3>
-                        <CloseButton aria-label="Close" className="close" onClick={toggle} />
-                   
-                </Card>
-            </Modal>
+            <Card style={{width:'233px',  border: '0' }} className='m-auto'>  
+                               <Card.Img variant="top" src={thumbnail}/>   
+                                <Card.Body>  
+                                  <h5 className="card-title" style={{textAlign:'center'}}>{title}</h5>   
+                                  <Button size='lg' onClick={handleShow} variant="primary" style={{borderRadius:'8px', textAlign: 'center'}}>
+                                    More info...
+                                  </Button>
+                                </Card.Body> 
+                    <Modal
+                        show={show}
+                        onHide={handleClose}
+                        size="lg"
+                        
+                        fullscreen="lg-down"
+                    >
+                        <Modal.Header closeButton>
+                          <Modal.Title style={{fontSize: '25px'}}><h3>{title}</h3></Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                        {thumbnail}
+                          <div style={{fontSize:'18px', color:'darkBlack'}}>
+                           Pages: {pages}<br/>
+                           Language: {language}<br/>
+                           Author: {author} <br/>
+                           Publisher: {publisher}<br/>
+                           Published Date: {publishedDate}<br/>
+                           Print Type: {printType} <br/>
+                           Average Rating: <Rating rating={averageRating}  />    
+                           <br/><br/>   
+                           Description:<br/>
+                           <p>{description}</p>
+                         </div>
+                        </Modal.Body>
+                    </Modal>
+            </Card> 
         </div>
     )
 }
