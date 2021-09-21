@@ -17,13 +17,16 @@ const Book = ({
     const handleShow = () => setShow(true);
     return (
         <div>
-            <Card style={{width:'233px',  border: '0' }} className='m-auto'>  
+            <Card style={{width:'233px',  border: '0',padding: '8px' }} className='m-auto'>  
                                <Card.Img variant="top" src={thumbnail}/>   
                                 <Card.Body>  
-                                  <h5 className="card-title" style={{textAlign:'center'}}>{title}</h5>   
-                                  <Button size='lg' onClick={handleShow} variant="primary" style={{borderRadius:'8px', textAlign: 'center'}}>
-                                    More info...
-                                  </Button>
+                                  <h4 className="card-title" style={{textAlign:'center'}}>{title}</h4> 
+                                  <h5 style={{textAlign:'center'}}>by {author}</h5>  
+                                  <div style={{textAlign:'center'}}>
+                                      <Button size='lg' onClick={handleShow} variant="primary" style={{borderRadius:'8px'}}>
+                                        More info...
+                                      </Button>
+                                  </div>
                                 </Card.Body> 
                     <Modal
                         show={show}
@@ -36,9 +39,9 @@ const Book = ({
                           <Modal.Title style={{fontSize: '25px'}}><h3>{title}</h3></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                          <div style={{textAlign:'center'}}> 
-                                 <img src={thumbnail} alt="Generic_image"/>
-                          </div> 
+                          <div style={{textAlign:'center'}}>
+                              <img src={thumbnail} alt="Book"/>
+                          </div>
                           <div style={{fontSize:'18px', textAlign: 'center'}}>
                               Pages: {pages}<br/>
                               Language: {language}<br/>
@@ -46,7 +49,7 @@ const Book = ({
                               Publisher: {publisher}<br/>
                               Published Date: {publishedDate}<br/>
                               Print Type: {printType} <br/>
-                              Average Rating: <Rating rating={averageRating}  />    
+                              Average Rating: <Rating rating={averageRating}  /> <br/><br/>   
                            </div> 
                            <div style={{fontSize:'18px'}}>
                                   Description:<br/>

@@ -32,7 +32,7 @@ const handleSubmit = (e) => {
 }
 
 const bookAuthors = (authors) => {
-  if (!authors) return "";
+  if (!authors) return " Author not available ";
   if (authors.length <= 2) {
     authors = authors.join(" and ");
   } else if (authors.length > 2) {
@@ -75,7 +75,7 @@ return(
                           <Book 
                             thumbnail={query.volumeInfo.imageLinks !== undefined ? query.volumeInfo.imageLinks.thumbnail: Image}
                             title={query.volumeInfo.title}
-                            pages={query.volumeInfo.pageCount}
+                            pages={query.volumeInfo.pageCount !== undefined ? query.volumeInfo.pageCount: 'Pages not available'}
                             language={query.volumeInfo.language}
                             author={bookAuthors(query.volumeInfo.authors)}
                             publisher={query.volumeInfo.publisher !== undefined ? query.volumeInfo.publisher: 'Publisher not available'}
