@@ -10,7 +10,6 @@
     </li>
     <li><a href=#api>API</a></li>
     <li><a href="#built-with">Built With</a></li>
-    <li><a href="#framework">Framework</a></li> 
      <li><a href=#installation>Installation</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -19,7 +18,7 @@
 
 
 ## About the project
-The project allows you to search for books, after obtaining the results you can press the "More info" button to get more information about the book such as author, year of publication, publisher, language and number of pages.
+The project allows you to search for books, after obtaining the results you can press the "More info" button to get more informations about the book such as author, year of publication, publisher, language and number of pages.
 
  See it in action :  https://romantic-lamarr-52095c.netlify.app/
 
@@ -29,8 +28,14 @@ The API used is the Google Books API.
 API: https://developers.google.com/books/docs/overview
 
 ## Built with
+To develop the app I used:
+- React
+- React Router
+- React Hooks
+- Axios
+- React-bootstrap
 
-## Framework
+
 
 # Installation
 # Getting Started with Create React App
