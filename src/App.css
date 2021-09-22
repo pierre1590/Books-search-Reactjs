@@ -65,7 +65,7 @@ small{
 /* Media queries */
 @media only screen and (max-width: 600px){
     .header{
-        height:50%;
+        height:55%;
         margin: 5px;
     }
 
