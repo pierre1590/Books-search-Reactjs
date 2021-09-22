@@ -8,7 +8,7 @@
     <li>
       <a href="#about-the-project">About the project</a>
     </li>
-    <li><a href=#apis>API</a></li>
+    <li><a href=#api>API</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#framework">Framework</a></li> 
      <li><a href=#installation>Installation</a></li>
@@ -20,6 +20,8 @@
 
 ## About the project
  See it in action :  https://romantic-lamarr-52095c.netlify.app/
+
+## API
 
 ## Built with
 
