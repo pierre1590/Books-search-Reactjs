@@ -10,7 +10,8 @@
     </li>
     <li><a href=#api>API</a></li>
     <li><a href="#built-with">Built With</a></li>
-     <li><a href=#installation>Installation</a></li>
+    <li><a href=#installation>Installation</a></li>
+    <li><a href=#netlify>Netlify Badge</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -109,6 +110,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+
+## Netlify Badge
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a13ddda9-8f34-4d11-9ce6-39753813ca34/deploy-status)](https://app.netlify.com/sites/romantic-lamarr-52095c/deploys)
 
 ## Contact
 Piero Sabino - [@SabinoPiero](https://twitter.com/SabinoPiero) - [P137ru590](https://www.instagram.com/p137ru590/?hl=it) - [Piero Sabino](https://www.linkedin.com/in/piero-sabino-15a1b671/) - piero.sa@icloud.com
