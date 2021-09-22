@@ -56,7 +56,7 @@ return(
                             placeholder='Search book...'
                             aria-label='search-book'
                             aria-describedby='basic-addon2'
-                            
+                            className="searchbar"
                             name='query'
                             value={query}
                             onChange={handleChange}
