@@ -29,7 +29,7 @@ API: https://developers.google.com/books/docs/overview
 
 ## Built with
 To develop the app I used:
-- React
+- React.js
 - React Router
 - React Hooks
 - Axios
