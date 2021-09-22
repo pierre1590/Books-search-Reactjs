@@ -12,13 +12,6 @@ body{
     background: #fff;
 }
 
-p{
-    font-size: 1.6rem;
-}
-
-small{
-    font-size: 1.2rem;
-}
 
 .container{
     margin: 0 auto;
@@ -42,30 +35,5 @@ small{
     text-align:center;
 }
 
-.form{
-    display:grid;
-}
 
 
-
- .button{
-    background-color: rgba(0,0,0,0.75);
-    color: white;
-    padding: 1rem 2rem;
-    border: 1px solid rgba(0,0,0,0.75);
-    border-radius: 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 1.5rem;
-    font-family: 'Libre Baskerville', serif;
-    
-    transition: background-color 250ms;
-}
-
-.button:hover{
-    background-color: rgba(0,0,0,0.85)
-}
- 
-.searchbar{
-    width:80%;
-}
