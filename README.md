@@ -1,5 +1,5 @@
 # Books Finder 
-<img src="https://i.ibb.co/9w6Wx6W/Preview-Success.jpg" alt="Preview-Success" width="650px" height="420px">
+<img src="https://i.ibb.co/9w6Wx6W/Preview-Success.jpg" alt="Preview-Success" width="850px" height="420px">
 
  See it in action :  https://romantic-lamarr-52095c.netlify.app/
 
