@@ -6,26 +6,26 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-        <li><a href="#framework">Framework</a></li> 
-      </ul>
+      <a href="#about-the-project">About the project</a>
     </li>
+    <li><a href=#apis>API</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#framework">Framework</a></li> 
+     <li><a href=#installation>Installation</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
- See it in action :  https://romantic-lamarr-52095c.netlify.app/
 
 
 ## About the project
-
+ See it in action :  https://romantic-lamarr-52095c.netlify.app/
 
 ## Built with
 
 ## Framework
 
+# Installation
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -98,4 +98,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-##Contact
+## Contact
+Piero Sabino - [@SabinoPiero](https://twitter.com/SabinoPiero) - [P137ru590](https://www.instagram.com/p137ru590/?hl=it) - [Piero Sabino](https://www.linkedin.com/in/piero-sabino-15a1b671/) - piero.sa@icloud.com
+
+Project Link: [https://github.com/pierre1590/recycle](https://github.com/pierre1590/Books-search-Reactjs)
