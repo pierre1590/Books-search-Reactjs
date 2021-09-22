@@ -13,7 +13,7 @@ function Rating(props) {
           // But if we match the correct number, we must check if this is an integer
           if (rating && !Number.isSafeInteger(rating)) {
             // If there's no rating, or is not an integer, it's a half star
-            return (IoIosStarHalf);
+            return IoIosStarHalf ;
           }
     
           // If no case match, well it's an empty one
@@ -24,14 +24,14 @@ function Rating(props) {
       return (
         <div style={{ color: 'orange' }}>
           {/* Create one Star for every loop */}
-          {[1, 2, 3, 4, 5].map((number) => {
+          {[1,2,3,4,5].map((number) => {
             // For every star, we need to check if we render a full or half one
             const FinalStar = chooseStar(number);
     
             return <FinalStar onClick={() => setRating(number)} />;
           })}
          {props.rating}
-    </div>
+      </div>
 );
 }
 

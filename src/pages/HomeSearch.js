@@ -50,7 +50,7 @@ return(
         <div className="header">
             <h1 className="title">Book Finder</h1>
                     <Form onSubmit={handleSubmit}>
-                      <InputGroup className='mb-3 form'>
+                      <InputGroup className='mb-3'>
                         <FormControl
                            size="lg"
                             placeholder='Search book...'
