@@ -19,9 +19,14 @@
 
 
 ## About the project
+The project allows you to search for books, after obtaining the results you can press the "More info" button to get more information about the book such as author, year of publication, publisher, language and number of pages.
+
  See it in action :  https://romantic-lamarr-52095c.netlify.app/
 
 ## API
+The API used is the Google Books API.
+
+API: https://developers.google.com/books/docs/overview
 
 ## Built with
 
