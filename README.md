@@ -1,11 +1,30 @@
 # Book Finder 
 <img src="https://i.ibb.co/9w6Wx6W/Preview-Success.jpg" alt="Preview-Success" width="800px" height="420px">
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#framework">Framework</a></li> 
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
  See it in action :  https://romantic-lamarr-52095c.netlify.app/
 
 
+## About the project
 
 
+## Built with
+
+## Framework
 
 # Getting Started with Create React App
 
@@ -77,3 +96,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+##Contact

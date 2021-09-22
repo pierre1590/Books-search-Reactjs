@@ -29,7 +29,7 @@ small{
     color: white;
     font-family: 'Libre Baskerville', serif;
     border-radius: 20px;
-    height:18vh;
+    height:15vh;
     
 }
 
@@ -65,7 +65,7 @@ small{
 /* Media queries */
 @media only screen and (max-width: 600px){
     .header{
-        height:55%;
+        height:60%;
         margin: 5px;
     }
 
