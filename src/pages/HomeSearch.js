@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Button, InputGroup, FormControl, Form,  Row, Col } from 'react-bootstrap';
+import {Container, Button, InputGroup, FormControl, Form,  Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import Image from '../images/ImageNotAvailable.jpg';
 import Book from './Book';
@@ -46,7 +46,7 @@ const bookAuthors = (authors) => {
 
 
 return(
-   <div className="container">
+   <Container fluid='sm'>
         <div className="header">
             <h1 className="title">Book Finder</h1>
                     <Form onSubmit={handleSubmit}>
@@ -59,6 +59,7 @@ return(
                             name='query'
                             value={query}
                             onChange={handleChange}
+                            className='searchbar'
                         />
                             <Button  variant="secondary" type='submit' id="button-addon2">
                                <i class="fas fa-search"></i>
@@ -90,7 +91,7 @@ return(
                 </Row> 
                 
                
-    </div>
+    </Container>
      
     
 )

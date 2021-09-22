@@ -20,11 +20,7 @@ small{
     font-size: 1.2rem;
 }
 
-.container{
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 40px;
-}
+
 
 .header{
     background-image: url(./images/bookshelf.jpg);
@@ -33,7 +29,7 @@ small{
     color: white;
     font-family: 'Libre Baskerville', serif;
     border-radius: 20px;
-    height:15vh;
+    height:18vh;
     
 }
 
@@ -66,3 +62,11 @@ small{
     background-color: rgba(0,0,0,0.85)
 }
  
+/* Media queries */
+@media only screen and (max-width: 600px){
+    .header{
+        height:50%;
+        margin: 5px;
+    }
+
+}

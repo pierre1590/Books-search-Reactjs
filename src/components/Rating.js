@@ -11,7 +11,10 @@ function Rating(props) {
         if (index <= rating) return IoIosStar;
         else {
           // But if we match the correct number, we must check if this is an integer
-          if (rating && !Number.isSafeInteger(rating)) {
+          if (
+            rating && 
+            !Number.isSafeInteger(rating) &&
+             Math.ceil(rating)===index) {
             // If there's no rating, or is not an integer, it's a half star
             return IoIosStarHalf ;
           }
