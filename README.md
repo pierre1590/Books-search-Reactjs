@@ -1,6 +1,6 @@
 # Book Finder 
 
-![AUR last modified](https://img.shields.io/aur/last-modified/Books-search-Reactjs?color=blue&style=plastic)
+![AUR last modified](https://img.shields.io/aur/last-modified/color=blue&style=plastic)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a13ddda9-8f34-4d11-9ce6-39753813ca34/deploy-status)](https://app.netlify.com/sites/romantic-lamarr-52095c/deploys)
 
