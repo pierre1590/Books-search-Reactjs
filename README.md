@@ -2,6 +2,7 @@
 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a13ddda9-8f34-4d11-9ce6-39753813ca34/deploy-status)](https://app.netlify.com/sites/romantic-lamarr-52095c/deploys)
+![node-current](https://img.shields.io/node/v/npm?style=plastic)
 ![GitHub repo size](https://img.shields.io/github/repo-size/pierre1590/Books-search-Reactjs?style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/pierre1590/Books-search-Reactjs?style=plastic)
 
