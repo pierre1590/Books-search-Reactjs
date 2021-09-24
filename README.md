@@ -5,7 +5,7 @@
 ![node-current](https://img.shields.io/node/v/npm?style=plastic)
 ![GitHub repo size](https://img.shields.io/github/repo-size/pierre1590/Books-search-Reactjs?style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/pierre1590/Books-search-Reactjs?style=plastic)
-  ![tag node.js](https://img.shields.io/static/v1?label=NODE.JS&message=node.js&logo=node.js&logoColor=success&style=plastic&logoWidth=20)
+  ![npm](https://img.shields.io/npm/v/npm?style=plastic)
   ![tag react](https://img.shields.io/static/v1?label=REACT.JS&message=react.js&logo=react&logoColor=blue&style=plastic&logoWidth=20)
 <img src="https://i.ibb.co/9w6Wx6W/Preview-Success.jpg" alt="Preview-Success" width="800px" height="420px">
 
