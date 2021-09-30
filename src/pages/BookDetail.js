@@ -45,7 +45,7 @@ const BookDetail = () => {
 
     return(
         <div>
-            <Container fluid="md" style={{margin:'20px'}}>
+            <Container fluid="sm" style={{margin:'15px'}}>
                 <Link to={'/'}>
                        <Button variant="dark"  style={{margin:'10px'}}>
                            <i className="fas fa-home"></i> Home
@@ -57,7 +57,7 @@ const BookDetail = () => {
                                 <h1 style={{textAlign:'center'}}>
                                      {query.volumeInfo.title}
                                 </h1>
-                            <Image fluid style={{ height: 450, width: 450, margin:'15px' }}
+                            <Image fluid style={{ height: 450, width: 450, margin:'12px' }}
                                 alt={`${query.volumeInfo.title} query`}
                                 src={query.volumeInfo.imageLinks !== undefined
                                     ? query.volumeInfo.imageLinks.thumbnail
