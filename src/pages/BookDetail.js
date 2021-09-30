@@ -23,7 +23,7 @@ const BookDetail = () => {
         return authors;
       };
 
-      const 
+
 
 
     useEffect(()=> {
