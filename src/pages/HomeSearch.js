@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
-import {Container, Button, InputGroup, FormControl, Form,  Row, Col } from 'react-bootstrap';
+import {Container,Card, Button, InputGroup, FormControl, Form,  Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import Image from '../images/ImageNotAvailable.jpg';
-import Book from './Book';
+import {Link} from 'react-router-dom';
+
 
 function HomeSearch(){
      //states input query
@@ -67,33 +68,28 @@ return(
                      </InputGroup>
                     </Form>
         </div>
-                <Row><br/>
-                <h3 style={{textAlign:'center',marginTop:'5px'}}>Books found: {book.length}</h3>
-                <h3 style={{textAlign:'center'}}>Searched for : <p style={{fontSize:'22px',color:'red'}}>" {query} "</p></h3>
-                  {book.map((query) => ( 
+                <br/>
+                <Row>
+                  {book.map((query, index) => ( 
+                   
                       <Col sm={4}>
-                          <Book 
-                            thumbnail={query.volumeInfo.imageLinks !== undefined ? query.volumeInfo.imageLinks.thumbnail: Image}
-                            title={query.volumeInfo.title}
-                            pages={query.volumeInfo.pageCount !== undefined ? query.volumeInfo.pageCount: 'Pages not available'}
-                            language={query.volumeInfo.language}
-                            author={bookAuthors(query.volumeInfo.authors)}
-                            publisher={query.volumeInfo.publisher !== undefined ? query.volumeInfo.publisher: 'Publisher not available'}
-                            publishedDate={query.volumeInfo.publishedDate}
-                            printType={query.volumeInfo.printType}
-                            averageRating={query.volumeInfo.averageRating }
-                            description={query.volumeInfo.description !== undefined ? query.volumeInfo.description: 'Description not available'}
-                          />
-
-                      
-                        </Col>
-                  ))}
-                </Row> 
-                
-               
+                     
+                      <Card key={index} style={{width:'233px',  border: '0',padding: '8px' }} className='m-auto'>
+                          <Card.Img variant="top" src={query.volumeInfo.imageLinks !== undefined ? query.volumeInfo.imageLinks.thumbnail: Image}/> 
+                          <Card.Body>
+                          <h3>{query.volumeInfo.title}</h3>
+                          <h5>by {bookAuthors(query.volumeInfo.authors)}</h5>
+                            <Link to={`/book/${query.id}`}>
+                              <Button variant="primary"  size="lg" style={{margin:'20px'}}>
+                                 More info...
+                              </Button>
+                            </Link> 
+                    </Card.Body> 
+                </Card>
+                </Col>
+                  ))}    
+            </Row>
     </Container>
-     
-    
 )
 
 }

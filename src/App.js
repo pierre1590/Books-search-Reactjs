@@ -1,18 +1,18 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Book from './pages/Book';
+import BookDetail from './pages/BookDetail';
 import HomeSearch from './pages/HomeSearch';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function App() {
+const  App = () => {
   return (
     <div>
       <Router>
           <Switch>
             <Route path="/" exact component={HomeSearch} />
-            <Route path="/book/:id" componment={Book} />
+            <Route path="/book/:queryId" exact component={BookDetail} />
           </Switch>
       </Router>
     </div>
