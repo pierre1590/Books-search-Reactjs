@@ -20,9 +20,9 @@ function HomeSearch(){
     setQuery(query);
   }
 
+  //Request to API 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     axios
       .get(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=40`)
       .then((res) => {

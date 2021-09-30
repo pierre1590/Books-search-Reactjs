@@ -7,7 +7,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/pierre1590/Books-search-Reactjs?style=plastic)
   ![npm](https://img.shields.io/npm/v/npm?style=plastic)
   ![tag react](https://img.shields.io/static/v1?label=REACT.JS&message=react.js&logo=react&logoColor=blue&style=plastic&logoWidth=20)
-<img src="https://i.ibb.co/9w6Wx6W/Preview-Success.jpg" alt="Preview-Success" width="800px" height="420px">
+<img src="https://i.ibb.co/mS2Zpzw/research.jpg" alt="Preview-Success" width="800px" height="420px">
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">

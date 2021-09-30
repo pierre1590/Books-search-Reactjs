@@ -26,7 +26,7 @@ const BookDetail = () => {
 
     
 
-
+//Request to API 
     useEffect(()=> {
         console.log(queryId);
         const FetchBook = async () => {
