@@ -24,6 +24,7 @@ const BookDetail = () => {
       };
 
 
+    
 
 
     useEffect(()=> {
@@ -47,46 +48,44 @@ const BookDetail = () => {
             <Container fluid>
                 <Link to={'/'}>
                        <Button variant="dark" style={{margin:'10px'}}>
-                            Back Home
+                           <i className="fas fa-home"></i> Home
                        </Button>
                 </Link>
                 {query && (
-        <Row>
-          <Col>
-            <Image fluid style={{height: 600, width: 500}}
-              alt={`${query.volumeInfo.title} query`}
-              src={
-                query.volumeInfo.imageLinks !== undefined
-                  ? query.volumeInfo.imageLinks.thumbnail
-                  : Cover
-              }
-            />
-          </Col>
-          <Col>
-                      <h3>
-                        <strong>Title:</strong> {query.volumeInfo.title}
-                        </h3>
-                        <p>
-                        <strong>Authors:</strong> {bookAuthors(query.volumeInfo.authors)}
-                        </p>
-                        <p>
-                        <strong>Published Date:</strong> {query.volumeInfo.publishedDate}
-                        </p>
-                        <p>
-                        <strong>Publisher:</strong> {query.volumeInfo.publisher}
-                        </p>
-                        <p>
-                        <strong>Page Count:</strong> {query.volumeInfo.pageCount}
-                        </p>
-                        <p>
-                        <strong>Rating:</strong> <Rating rating={query.volumeInfo.averageRating}/>
-                        </p>
-                        <p>
-                        Description:<br/>
-                        {query.volumeInfo.description}
-                        </p>
-         </Col>
-     </Row>
+        <><Row>
+                        <Col>
+                            <Image fluid style={{ height: 600, width: 500, textAlign:'center' }}
+                                alt={`${query.volumeInfo.title} query`}
+                                src={query.volumeInfo.imageLinks !== undefined
+                                    ? query.volumeInfo.imageLinks.thumbnail
+                                    : Cover} />
+                        </Col>
+                    </Row><Row>
+                            <Col>
+                                <h3>
+                                    <strong>Title:</strong> {query.volumeInfo.title}
+                                </h3>
+                                <p>
+                                    <strong>Authors:</strong> {bookAuthors(query.volumeInfo.authors)}
+                                </p>
+                                <p>
+                                    <strong>Published Date:</strong> {query.volumeInfo.publishedDate}
+                                </p>
+                                <p>
+                                    <strong>Publisher:</strong> {query.volumeInfo.publisher}
+                                </p>
+                                <p>
+                                    <strong>Page Count:</strong> {query.volumeInfo.pageCount}
+                                </p>
+                                <p>
+                                    <strong>Rating:</strong> <Rating rating={query.volumeInfo.averageRating} />
+                                </p>
+                                <p>
+                                   <strong>Description:</strong><br />
+                                    {query.volumeInfo.description}
+                                </p>
+                            </Col>
+                        </Row></>
       )}
     </Container>
   );      
