@@ -54,7 +54,7 @@ const BookDetail = () => {
                 {query && (
         <><Row>
                         <Col>
-                            <Image fluid style={{ height: 600, width: 500, textAlign:'center' }}
+                            <Image fluid style={{ height: 600, width: 500, textAlign:'center',margin:'15px' }}
                                 alt={`${query.volumeInfo.title} query`}
                                 src={query.volumeInfo.imageLinks !== undefined
                                     ? query.volumeInfo.imageLinks.thumbnail
