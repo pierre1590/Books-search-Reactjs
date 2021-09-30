@@ -45,16 +45,19 @@ const BookDetail = () => {
 
     return(
         <div>
-            <Container fluid>
+            <Container fluid="md" style={{margin:'20px'}}>
                 <Link to={'/'}>
-                       <Button variant="dark" style={{margin:'10px'}}>
+                       <Button variant="dark"  style={{margin:'10px'}}>
                            <i className="fas fa-home"></i> Home
                        </Button>
                 </Link>
                 {query && (
         <><Row>
                         <Col>
-                            <Image fluid style={{ height: 600, width: 500, textAlign:'center',margin:'15px' }}
+                                <h1 style={{textAlign:'center'}}>
+                                     {query.volumeInfo.title}
+                                </h1>
+                            <Image fluid style={{ height: 450, width: 450, margin:'15px' }}
                                 alt={`${query.volumeInfo.title} query`}
                                 src={query.volumeInfo.imageLinks !== undefined
                                     ? query.volumeInfo.imageLinks.thumbnail
@@ -62,9 +65,7 @@ const BookDetail = () => {
                         </Col>
                     </Row><Row>
                             <Col>
-                                <h3>
-                                    <strong>Title:</strong> {query.volumeInfo.title}
-                                </h3>
+                               
                                 <p>
                                     <strong>Authors:</strong> {bookAuthors(query.volumeInfo.authors)}
                                 </p>
