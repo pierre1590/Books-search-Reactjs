@@ -11,7 +11,7 @@ function HomeSearch(){
   const [query, setQuery] = useState('');
 
   //create the states for books
-  const [book, setBooks] = useState([]);
+  const [books, setBooks] = useState([]);
   
   
 
@@ -26,12 +26,17 @@ function HomeSearch(){
     axios
       .get(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=40`)
       .then((res) => {
-       console.log(res.data.items);
-        setBooks(res.data.items);
+        console.log(res.data.items);
+        if(res.data.totalItems > 0){
+          setBooks(res.data.items);
+        }else
+        {
+          toast.error('No Books.');
+        }  
       })
       .catch((err) => {
         console.log(err.response);
-        toast.error('Book not found.', {position:toast.POSITION.TOP_RIGHT});
+        toast.error('Book not found.')
       });
 }
 
@@ -77,11 +82,8 @@ return(
       </div>
       <br />
       <Row>
-       
-        {book.map((query, index) => (
-
+        {books.map((query, index) => (
           <Col sm={4}>
-
             <Card key={index} style={{ width: '233px', border: '0', padding: '8px' }} className='m-auto'>
               <Card.Img variant="top" src={query.volumeInfo.imageLinks !== undefined ? query.volumeInfo.imageLinks.thumbnail : Image} />
               <Card.Body>

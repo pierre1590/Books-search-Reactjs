@@ -83,7 +83,7 @@ const BookDetail = () => {
                                 </p>
                                 <p>
                                    <strong>Description:</strong><br />
-                                    {query.volumeInfo.description}
+                                    {query.volumeInfo.description !== undefined ? query.volumeInfo.description : 'description not available.'}
                                 </p>
                             </Col>
                         </Row></>
